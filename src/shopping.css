@@ -1,0 +1,55 @@
+.header-actions a { color: inherit; text-decoration: none; }
+.header-actions .icon-button { display: grid; place-items: center; width: 38px; height: 38px; }
+.saved-button { position: relative; display: grid; place-items: center; min-width: 38px; font-size: 24px; }
+.saved-button span { position: absolute; top: -3px; right: -3px; min-width: 16px; padding: 1px 4px; border-radius: 20px; background: var(--green); color: var(--white); font-size: 10px; text-align: center; }
+.product-image-wrap { position: relative; display: block; overflow: hidden; }
+.product-image-wrap > a { display: block; }
+.heart { position: absolute; z-index: 1; top: 12px; right: 12px; display: grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--white); color: var(--ink); font-size: 21px; cursor: pointer; box-shadow: 0 2px 10px #1e29211a; }
+.heart.is-saved { color: #bd4f45; }
+.cart-page, .saved-page { min-height: 55vh; padding-top: 34px; padding-bottom: 72px; }
+.cart-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin: 24px 0 30px; }
+.cart-heading .eyebrow { margin-bottom: 4px; }
+.cart-heading h1 { margin: 0; font: 700 42px/1.1 "Playfair Display", Georgia, serif; }
+.cart-heading > span { color: var(--muted); padding-bottom: 5px; }
+.cart-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: start; gap: 36px; }
+.cart-items { border-top: 1px solid var(--line); }
+.cart-item { display: grid; grid-template-columns: 112px minmax(0, 1fr) auto; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.cart-item-image { display: block; aspect-ratio: 1; overflow: hidden; background: var(--mint); }
+.cart-item-image img { width: 100%; height: 100%; object-fit: cover; }
+.cart-item-info h2 { margin: 5px 0 4px; font-size: 18px; }
+.cart-item-info h2 a { text-decoration: none; }
+.cart-unit-price { color: var(--muted); font-size: 13px; }
+.quantity-control { display: inline-flex; align-items: center; gap: 14px; margin-top: 12px; border: 1px solid var(--line); }
+.quantity-control button { width: 34px; height: 32px; border: 0; background: transparent; color: var(--ink); font: inherit; cursor: pointer; }
+.quantity-control button:disabled { color: #a9b0a9; cursor: not-allowed; }
+.quantity-control span { min-width: 14px; text-align: center; }
+.cart-item-end { display: flex; flex-direction: column; align-items: end; justify-content: space-between; gap: 14px; }
+.remove-item { border: 0; background: none; color: var(--muted); font: inherit; font-size: 13px; text-decoration: underline; cursor: pointer; }
+.cart-summary { padding: 22px; border: 1px solid var(--line); background: var(--white); }
+.cart-summary h2 { margin: 0 0 18px; font-size: 19px; }
+.cart-summary > div { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; color: var(--muted); }
+.cart-summary > div strong { color: var(--ink); }
+.cart-summary .cart-total { margin-top: 8px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink); font-size: 18px; }
+.checkout-button { width: 100%; margin-top: 14px; padding: 13px 16px; border: 0; background: var(--green); color: var(--white); font: inherit; font-weight: 700; cursor: pointer; }
+.checkout-button:hover { background: var(--green-dark); }
+.cart-summary p { margin: 12px 0 0; color: var(--muted); font-size: 12px; }
+.cart-message { max-width: 560px; margin: 56px auto 24px; padding: 44px 24px; text-align: center; }
+.cart-message-icon { display: grid; place-items: center; width: 54px; height: 54px; margin: 0 auto 18px; border-radius: 50%; background: var(--mint); color: var(--green); font-size: 25px; }
+.cart-message .eyebrow { margin-bottom: 4px; }
+.cart-message h1, .cart-message h2 { margin: 0 0 10px; font: 700 32px/1.15 "Playfair Display", Georgia, serif; }
+.cart-message p:not(.eyebrow) { margin: 0 auto 22px; color: var(--muted); }
+.cart-message .btn { display: inline-flex; }
+.saved-page .product-grid { margin-bottom: 32px; }
+@media (max-width: 760px) {
+  .cart-layout { grid-template-columns: 1fr; gap: 24px; }
+  .cart-summary { max-width: none; }
+}
+@media (max-width: 520px) {
+  .header-actions { gap: 4px; }
+  .header-actions .icon-button { width: 32px; }
+  .cart-item { grid-template-columns: 78px minmax(0, 1fr) auto; gap: 11px; }
+  .cart-item-info h2 { font-size: 15px; }
+  .cart-item-end strong { font-size: 14px; }
+  .cart-heading h1 { font-size: 34px; }
+  .cart-heading { align-items: center; }
+}

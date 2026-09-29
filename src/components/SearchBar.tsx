@@ -1,0 +1,2 @@
+interface SearchBarProps { value: string; onChange: (value: string) => void; }
+export function SearchBar({ value, onChange }: SearchBarProps) { return <div className="field field-search"><label htmlFor="search">Search</label><div className="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Search fresh food..." value={value} onChange={(e) => onChange(e.target.value)} /></div></div>; }
